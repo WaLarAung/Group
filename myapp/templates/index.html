@@ -49,6 +49,7 @@
 
 
     <!-- tmp banner area start -->
+    {% for i in heroarea %}
     <div class="tmp-banner-one-area model-style-banner with-instructor style-2" id="home" data-black-overlay="2">
         <div class="container">
             <div class="banner-one-main-wrapper">
@@ -56,10 +57,10 @@
                     <div class="col-lg-12 ">
                         <div class="inner banner-model-15">
                             <h1 class="title tmp-fade-in">
-                                Julian Tobias
+                                {{i.title|safe}}
                             </h1>
                             <p class="disc tmp-fade-in">
-                                German Super Model, Influencer & Youtuber</p>
+                                {{i.note}}</p>
                         </div>
                     </div>
                 </div>
@@ -76,7 +77,7 @@
         </div>
         <div class="hero-bg-video">
             <video autoplay="" muted="" loop="" id="myVideo">
-                <source src="{% static 'assets/images/video/model.mp4' %}" type="video/mp4">
+                <source src="{{i.bgimage.url}}" type="video/mp4">
             </video>
         </div>
     </div>
@@ -86,12 +87,8 @@
     <div class="about-content-area">
         <div class="container tmp-section-gapTop">
             <div class="text-para-doc-wrap">
-                <h2 class="text-para-documents tmp-scroll-trigger tmp-fade-in inv-title-animation-wrap animation-order-1">A personal
-                    <span>portfolio</span> is a collection of your work, that is aa
-                    go achievements, and skills that highlights <span>web design</span> in your is abilities and
-                    professional growth. It serves as A personal to a portfolio in <span>since 2009</span> a collection
-                    of
-                    your work
+                <h2 class="text-para-documents tmp-scroll-trigger tmp-fade-in inv-title-animation-wrap animation-order-1">
+                    {{i.description}}
                 </h2>
                 <div class="right-bg-text-para">
                     <img src="{% static 'assets/images/banner/right-bg-text-para-doc.png' %}" alt="">
@@ -103,6 +100,7 @@
         </div>
     </div>
     <!-- tmp text para end -->
+    {% endfor %}
 
 
 {% endblock%}
