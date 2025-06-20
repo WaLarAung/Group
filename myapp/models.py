@@ -45,3 +45,20 @@ class Resume2(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now_add=True)
 
+class service1(models.Model):
+    name = RichTextField(max_length=300)
+    title = RichTextField(max_length=100)
+    description = RichTextField(blank=True, null=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+class service_no1(models.Model):
+    no = RichTextField(max_length=400)
+    description = RichTextField(blank=True, null=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+class service_img1(models.Model):
+    image = models.ImageField(upload_to='service/')
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)

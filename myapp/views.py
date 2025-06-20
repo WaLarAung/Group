@@ -9,6 +9,9 @@ def index_view(request):
     resume = Resume.objects.all()
     resume1 = Resume1.objects.all().order_by('id')[:4]
     resume2 = Resume2.objects.all().order_by('id')[:2]
+    service= service1.objects.all().order_by('-id')[:1]
+    service_no = service_no1.objects.all().order_by('-id')[:3]
+    service_img = service_img1.objects.all().order_by('-id')[:1]
     contex = {
         'heroarea':heroarea,
         'portfolioarea':portfolioarea,
@@ -16,5 +19,8 @@ def index_view(request):
         'resume':resume,
         'resume1':resume1,
         'resume2':resume2,
+        'service':service,
+        'service_no':service_no,
+        'service_img':service_img,
     }
     return render(request,'index.html',contex)

@@ -82,6 +82,41 @@
         </div>
     </div>
     <!-- tmp banner area end -->
+  <!-- Tpm Latest Service Area Start -->
+    <section class="latest-service-area tmp-section-gapTop" id="service">
+        <div class="container">
+          {% for i in service %}
+            <div class="section-head mb--50">
+                <div class="section-sub-title center-title tmp-scroll-trigger tmp-fade-in animation-order-1">
+                    <span class="subtitle">{{ i.name|safe }}</span>
+                </div>
+                <h2 class="title split-collab tmp-scroll-trigger tmp-fade-in animation-order-2">{{ i.title|safe }}
+                    
+                </h2>
+                <p class="description section-sm tmp-scroll-trigger tmp-fade-in animation-order-3">{{i.description|safe }}
+                   </p>
+            </div>
+          {% endfor %}
+            <div class="row">
+                <div class="col-lg-6">
+                  {% for i in service_no %}
+                    <div class="service-card-v2 tmponhover tmp-scroll-trigger tmp-fade-in animation-order-1">
+                        <h2 class="service-card-num"><span>{{i.no|safe }}</span>{{i.title|safe}}</h2>
+                        <p class="service-para">{{i.description|safe }}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="col-lg-6">
+                  {% for i in service_img %}
+                    <div class="service-card-user-image">
+                        <img class="tmp-scroll-trigger tmp-zoom-in animation-order-1" src="{{ i.image.url }}" alt="latest-user-image">
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Tpm Latest Service Area End -->
 
     <!-- tmp text para start -->
     <div class="about-content-area">
