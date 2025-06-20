@@ -290,5 +290,100 @@
     </section>
     <!-- Tpm Latest Portfolio End -->
 
+        <!-- Tpm Education Experience Area Start -->
+    <section class="education-experience tmp-section-gapTop" id="resume">
+        <div class="container">
+            {% for i in resume %}
+            <div class="section-head mb--50">
+                <div class="section-sub-title center-title tmp-scroll-trigger tmp-fade-in animation-order-1">
+                    <span class="subtitle">{{ i.title|safe }}</span>
+                </div>
+                <h2 class="title split-collab tmp-scroll-trigger tmp-fade-in animation-order-2">{{ i.description|safe }}
+                </h2>
+                <p class="description section-sm tmp-scroll-trigger tmp-fade-in animation-order-3">
+                    {{ i.note|safe }}</p>
+            </div>
+            {% endfor %}
+            {% for i in resume %}
+            <h2 class="custom-title mb-32 tmp-scroll-trigger tmp-fade-in animation-order-1">{{ i.title1|safe }} 
+                <!-- <span><img src="{% static 'assets/images/custom-line/custom-line.png' %}" alt="custom-line"></span> -->
+            </h2>
+            {% endfor %}
+           
+            <div class="row g-5">
+                 {% for i in resume1 %}
+                <div class="col-lg-6 col-sm-6">
+                    <div class="education-experience-card tmponhover tmp-scroll-trigger tmp-fade-in animation-order-1">
+                        <h4 class="edu-sub-title">{{ i.title|safe }}</h4>
+                        <h2 class="edu-title">{{ i.note|safe }}</h2>
+                        <p class="edu-para">{{ i.description|safe }}</p>
+                    </div> 
+                </div>
+               {% endfor %}
+                <!-- <div class="col-lg-6 col-sm-6">
+                    <div class="education-experience-card tmponhover tmp-scroll-trigger tmp-fade-in animation-order-2">
+                        <h4 class="edu-sub-title">Assistant Director</h4>
+                        <h2 class="edu-title">2010-2014</h2>
+                        <p class="edu-para">Each project here showcases my commitment to excellence and adaptability, tailored to meet each client’s unique needs.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-sm-6">
+                    <div class="education-experience-card tmponhover tmp-scroll-trigger tmp-fade-in animation-order-3">
+                        <h4 class="edu-sub-title">Design Assistant</h4>
+                        <h2 class="edu-title">2008-2012</h2>
+                        <p class="edu-para">I’ve had the privilege of working with various clients, from startups to established companies, helping bring their visions to life.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-sm-6">
+                    <div class="education-experience-card tmponhover tmp-scroll-trigger tmp-fade-in animation-order-4">
+                        <h4 class="edu-sub-title">Design Assistant</h4>
+                        <h2 class="edu-title">2008-2012</h2>
+                        <p class="edu-para">Each project here showcases my commitment to excellence and adaptability, tailored to meet each client’s unique needs a personal.</p>
+                    </div>
+                </div> -->
+            </div>
+            
+            <div class="experiences-wrapper">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="experiences-wrap-left-content">
+                            {% for i  in resume %}
+                            <h2 class="custom-title mb-32 tmp-scroll-trigger tmp-fade-in animation-order-1">{{ i.title2|safe }} 
+                                <!-- <span><img src="{% static 'assets/images/custom-line/custom-line.png' %}" alt="custom-line"></span> -->
+                            </h2>
+                            {% endfor %}
+                            {% for i in resume2 %}
+                            <div class="experience-content tmp-scroll-trigger tmp-fade-in animation-order-1">
+                                <p class="ex-subtitle">{{ i.title|safe }}</p>
+                                <h2 class="ex-name" >{{ i.experience|safe }}</h2>
+                                <h3 class="ex-title">{{ i.position|safe }}</h3>
+                                <p class="ex-para">{{ i.description|safe }}</p>
+                            </div>
+                            {% endfor %}
+                            <!-- <div class="experience-content tmp-scroll-trigger tmp-fade-in animation-order-2">
+                                <p class="ex-subtitle">experience</p>
+                                <h2 class="ex-name">ModernTech (3 Years)</h2>
+                                <h3 class="ex-title">App Developer</h3>
+                                <p class="ex-para">In this portfolio, you’ll find a curated selection of projects that highlight my skills in [Main Areas, e.g., responsive web design.</p>
+                            </div> -->
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-6">
+                        {% for i in resume %}
+                        <div class="experiences-wrap-right-content">
+                            <img class="tmp-scroll-trigger tmp-zoom-in animation-order-1" src="{{ i.image.url }}" alt="expert-img">
+                        </div>
+                        {% endfor %}
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Tpm Education Experience Area End -->
+
+    
+
 
 {% endblock%}

@@ -19,3 +19,29 @@ class PortfolioArea(models.Model):
 class Title(models.Model):
     title = RichTextField(null=True,blank=True)
     description = models.TextField(null=True, blank=True)
+
+class Resume(models.Model):
+    title = RichTextField(null=True,blank=True)
+    description = RichTextField(null=True,blank=True)
+    note = RichTextField(null=True,blank=True)
+    title1 = RichTextField(null=True,blank=True)
+    title2 = RichTextField(null=True,blank=True)
+    image = models.ImageField(upload_to='resume',null=True,blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+class Resume1(models.Model):
+    title = RichTextField(null=True,blank=True)
+    note = RichTextField(null=True,blank=True)
+    description = RichTextField(null=True,blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+class Resume2(models.Model):
+    title = RichTextField(null=True,blank=True)
+    experience = RichTextField(null=True,blank=True)
+    position = RichTextField(null=True,blank=True)
+    description = RichTextField(null=True,blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now_add=True)
+

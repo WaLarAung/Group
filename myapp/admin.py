@@ -4,3 +4,6 @@ from . models import *
 admin.site.register(HeroArea)
 admin.site.register(PortfolioArea)
 admin.site.register(Title)
+admin.site.register(Resume)
+admin.site.register(Resume1)
+admin.site.register(Resume2)

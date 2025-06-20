@@ -6,9 +6,15 @@ def index_view(request):
     heroarea = HeroArea.objects.all()
     portfolioarea = PortfolioArea.objects.all().order_by('-id')[:4]
     title = Title.objects.all()
+    resume = Resume.objects.all()
+    resume1 = Resume1.objects.all().order_by('id')[:4]
+    resume2 = Resume2.objects.all().order_by('id')[:2]
     contex = {
         'heroarea':heroarea,
         'portfolioarea':portfolioarea,
         'title':title,
+        'resume':resume,
+        'resume1':resume1,
+        'resume2':resume2,
     }
     return render(request,'index.html',contex)
