@@ -62,3 +62,17 @@ class service_img1(models.Model):
     image = models.ImageField(upload_to='service/')
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+
+class about(models.Model):
+    name= RichTextField(null=True,blank=True)
+    title= RichTextField(null=True,blank=True)
+    description = RichTextField(null=True,blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+class about1(models.Model):
+    title = RichTextField(null=True,blank=True)
+    description = RichTextField(null=True,blank=True)
+    image = models.ImageField(upload_to='about')
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
