@@ -14,6 +14,7 @@ def index_view(request):
     service_img = service_img1.objects.all().order_by('-id')[:1]
     About = about.objects.all().order_by('id')
     About1= about1.objects.all().order_by('id')[:1]
+    blog_Model = Blog_Model.objects.all()
     contex = {
         'heroarea':heroarea,
         'portfolioarea':portfolioarea,
@@ -26,5 +27,6 @@ def index_view(request):
         'service_img':service_img,
         'About':About,
         'About1':About1,
+        'blog_Model':blog_Model,
     }
     return render(request,'index.html',contex)

@@ -76,3 +76,9 @@ class about1(models.Model):
     image = models.ImageField(upload_to='about')
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+
+class Blog_Model(models.Model):
+    title = RichTextField(null=True,blank=True)
+    description = RichTextField(null=True,blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
